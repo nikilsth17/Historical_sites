@@ -11,6 +11,8 @@ import Register from './src/screen/Register';
 import Search from './src/screen/Search';
 import SiteMap from './src/component/SiteMap';
 
+import { PaperProvider } from 'react-native-paper';
+import Details from './src/component/Details';
 
 
 const Tab = createBottomTabNavigator();
@@ -98,7 +100,8 @@ function TabNavigator() {
 
 function App() {
   return (
-    <NavigationContainer>
+    <PaperProvider>
+ <NavigationContainer>
       <Stack.Navigator initialRouteName="Welcome">
         <Stack.Screen
           name="Login"
@@ -120,8 +123,15 @@ function App() {
           component={SiteMap}
           options={{ headerShown: false }}
         />
+            <Stack.Screen
+          name="Details"
+          component={Details}
+          options={{ headerShown: false }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
+    </PaperProvider>
+   
   );
 }
 

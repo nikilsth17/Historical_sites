@@ -55,7 +55,7 @@ const Search = () => {
                   <Entypo name="location-pin" size={20} color="black">
                     0.5KM
                   </Entypo>
-                  <Button mode="contained-tonal" style={{ width: "80%" }}>
+                  <Button mode="contained-tonal" style={{ width: "80%" }} onPressIn={()=>navigation.navigate("Details")}>
                     See details
                   </Button>
                 </View>
