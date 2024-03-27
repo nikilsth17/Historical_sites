@@ -1,7 +1,6 @@
 import { View, Text, Image, SafeAreaView } from "react-native";
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
-import { Searchbar } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
 import { Button } from "react-native-paper";
 
@@ -54,6 +53,7 @@ const Details = () => {
           woodcarving and colossal pagoda temples consecrated to different gods
           and goddesses which is 15 km far from Kathmandu.
         </Text>
+        <Text>Price: Rs 200</Text>
         <View
           style={{ display: "flex", flexDirection: "row", gap: 10, padding: 5 }}
         >
