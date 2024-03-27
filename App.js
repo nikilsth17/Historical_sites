@@ -9,6 +9,7 @@ import Setting from './src/screen/Setting';
 import Login from './src/screen/Login';
 import Register from './src/screen/Register';
 import Search from './src/screen/Search';
+import SiteMap from './src/component/SiteMap';
 
 
 
@@ -70,6 +71,16 @@ function TabNavigator() {
           ),
         }}
       />
+       <Tab.Screen
+        name="Scan"
+        component={Setting}
+        options={{
+          tabBarLabel: 'Scan',
+          tabBarIcon: ({ color, size }) => (
+            <Icon name="qrcode" size={size} color={color} />
+          ),
+        }}
+      />
         <Tab.Screen
         name="Search"
         component={Search}
@@ -80,16 +91,7 @@ function TabNavigator() {
           ),
         }}
       />
-      <Tab.Screen
-        name="Setting"
-        component={Setting}
-        options={{
-          tabBarLabel: 'Settings',
-          tabBarIcon: ({ color, size }) => (
-            <Icon name="cog" size={size} color={color} />
-          ),
-        }}
-      />
+     
     </Tab.Navigator>
   );
 }
@@ -111,6 +113,11 @@ function App() {
         <Stack.Screen
           name="Home"
           component={TabNavigator}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="SiteMap"
+          component={SiteMap}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
